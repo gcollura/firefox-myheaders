@@ -1,4 +1,4 @@
-let headers = [];
+var headers = [];
 
 chrome.storage.local.get('headers', (res) => {
   headers = res.headers;
@@ -6,11 +6,6 @@ chrome.storage.local.get('headers', (res) => {
 
 function addHeaders(event) {
   let requestHeaders = event.requestHeaders || [];
-  chrome.storage.local.get('headers', (res) => {
-    headers = res.headers;
-    console.log(headers);
-  });
-  console.log(headers);
   for (header of headers) {
     requestHeaders.push(header);
   }

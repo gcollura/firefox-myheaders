@@ -10,7 +10,7 @@
   },
 
   "permissions": [
-    "webRequest", "webRequestBlocking", "storage"
+    "<all_urls>", "webRequest", "webRequestBlocking", "storage"
   ],
 
   "background": {
